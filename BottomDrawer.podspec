@@ -31,7 +31,7 @@ Pod::Spec.new do |s|
   s.source_files = 'BottomDrawer/Classes/**/*'
   
    s.resource_bundles = {
-     'BottomDrawer' => ['BottomDrawer/Assets/*.{png,jpeg,jpg,storyboard,xib,xcassets}']
+     'BottomDrawer' => ['BottomDrawer/*.xcassets']
    }
   s.frameworks = 'UIKit', 'MapKit'
 end
