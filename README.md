@@ -4,6 +4,8 @@
 [![Version](https://img.shields.io/cocoapods/v/BottomDrawer.svg?style=flat)](https://cocoapods.org/pods/BottomDrawer)
 [![License](https://img.shields.io/cocoapods/l/BottomDrawer.svg?style=flat)](https://cocoapods.org/pods/BottomDrawer)
 [![Platform](https://img.shields.io/cocoapods/p/BottomDrawer.svg?style=flat)](https://cocoapods.org/pods/BottomDrawer)
+
+
 BottomDrawer is an iOS component which presents a dismissible view from the bottom of the screen. BottomDrawer can be a useful replacement for popups and menus but can hold any viewcontroller so the use cases are endless. This repository includes the BottomDrawer component itself but also includes an extension for autolayout (NSLayoutConstraint)
 
 ![](screenshot.gif)
@@ -21,6 +23,7 @@ pod 'BottomDrawer'
 
 ```swift
 let request = self.storyboard?.instantiateViewController(withIdentifier: "test") as? TestViewController
+//TestViewController has to subclass BottomController
 let controller = BottomController()
 controller.destinationController = request
 controller.sourceController = self 
