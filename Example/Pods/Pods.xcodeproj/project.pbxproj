@@ -13,7 +13,8 @@
 		82AC9A55739932E1D9285CED850FE9AC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
 		92822711A7D8A5D8784C533BBE48E0A3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
 		9435739A5314D22ED639B771D2BA2086 /* BottomDrawer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA51CF4CCD806DE78FA617E11533F9C9 /* BottomDrawer.swift */; };
-		9F12AB9021CA606A001010A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F12AB8F21CA606A001010A0 /* Assets.xcassets */; };
+		9F12AB9221CA619C001010A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F12AB9121CA619C001010A0 /* Assets.xcassets */; };
+		9F12AB9621CA627B001010A0 /* AutoLayout+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F12AB9521CA627B001010A0 /* AutoLayout+Extension.swift */; };
 		BCD7B45DE1E6F985847799819D019038 /* BottomDrawer-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D34F8DFE5EEDF61B8C50516D9AB76086 /* BottomDrawer-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C20E3DA808B6174D9970BC8C4B95D6BA /* Pods-BottomDrawer_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 830D4D00A1B3B362AD41C8E8804092D0 /* Pods-BottomDrawer_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F47FF50DAFFBF3133FC678DAFC702F8C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
@@ -53,7 +54,8 @@
 		85C5D828FDB8804B8194E4F35B693ECA /* BottomDrawer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BottomDrawer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		899EA572E3D5383980691573027B2214 /* Pods-BottomDrawer_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BottomDrawer_Tests-Info.plist"; sourceTree = "<group>"; };
 		9C936A2810A0747379B22CA5BD1200D2 /* BottomDrawer-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "BottomDrawer-Info.plist"; sourceTree = "<group>"; };
-		9F12AB8F21CA606A001010A0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9F12AB9121CA619C001010A0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = BottomDrawer/Assets/Assets.xcassets; sourceTree = "<group>"; };
+		9F12AB9521CA627B001010A0 /* AutoLayout+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "AutoLayout+Extension.swift"; path = "BottomDrawer/Classes/AutoLayout+Extension.swift"; sourceTree = "<group>"; };
 		AA51CF4CCD806DE78FA617E11533F9C9 /* BottomDrawer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BottomDrawer.swift; path = BottomDrawer/Classes/BottomDrawer.swift; sourceTree = "<group>"; };
 		B367C502D8895BDB2C97E56E005AAA5E /* Pods-BottomDrawer_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BottomDrawer_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		B36AB396275697EEE1A5B13BA8A38FE3 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -163,10 +165,11 @@
 		94C6F702DA0C08355499C6FCBD22C36B /* BottomDrawer */ = {
 			isa = PBXGroup;
 			children = (
+				9F12AB9521CA627B001010A0 /* AutoLayout+Extension.swift */,
+				9F12AB9121CA619C001010A0 /* Assets.xcassets */,
 				AA51CF4CCD806DE78FA617E11533F9C9 /* BottomDrawer.swift */,
 				CF6FDAC99E39DA841AD5CB043279C6C9 /* Pod */,
 				2BB574C10336E28A4ABB45C7E65A409B /* Support Files */,
-				9F12AB8F21CA606A001010A0 /* Assets.xcassets */,
 			);
 			name = BottomDrawer;
 			path = ../..;
@@ -357,7 +360,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F12AB9021CA606A001010A0 /* Assets.xcassets in Resources */,
+				9F12AB9221CA619C001010A0 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,6 +381,7 @@
 			files = (
 				30853524E65825843079D8C8B3B9C57C /* BottomDrawer-dummy.m in Sources */,
 				9435739A5314D22ED639B771D2BA2086 /* BottomDrawer.swift in Sources */,
+				9F12AB9621CA627B001010A0 /* AutoLayout+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

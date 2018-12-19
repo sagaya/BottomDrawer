@@ -1,14 +1,21 @@
+//
+//  BottomController.swift
+//  BottomDrawer
+//
+//  Created by Sagaya Abdulhafeez on 19/12/2018.
+//
+
 
 import UIKit
 
-class NewController: UIViewController,UIGestureRecognizerDelegate {
+open class BottomController: UIViewController,UIGestureRecognizerDelegate {
     
     open var sourceController: UIViewController?
-    open var destinationController: NewController?
+    open var destinationController: BottomController?
     var containerViewTopConstraint:NSLayoutConstraint?
     open var startingHeight:CGFloat?
     var storedcontrollerView:UIView?
-    public static var shared = NewController()
+    public static var shared = BottomController()
     public var movable = true
     var vu: UIView?
     @objc func openr(){
@@ -35,14 +42,19 @@ class NewController: UIViewController,UIGestureRecognizerDelegate {
         image.contentMode = .scaleAspectFit
         return image
     }()
-    override func viewDidLoad() {
+    override open func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.clear
         view.addSubview(backgroundOverlay)
         self.modalPresentationStyle = .overCurrentContext
         self.hidesBottomBarWhenPushed = true
         guard let controller = self.destinationController, let controllerView = controller.view else {return}
+        #if swift(>=4.2)
+        addChild(controller)
+        #else
         addChildViewController(controller)
+        #endif
+        
         addGestureToView()
         self.view.addSubview(controllerView)
         controllerView.translatesAutoresizingMaskIntoConstraints = false
@@ -53,8 +65,12 @@ class NewController: UIViewController,UIGestureRecognizerDelegate {
         let currentConstant = startingHeight ?? 120
         containerViewTopConstraint = controllerView.topAnchor.constraint(equalTo: view.topAnchor, constant: view.frame.height - currentConstant)
         containerViewTopConstraint?.isActive = true
-        controllerView.backgroundColor = .white
+        #if swift(>=4.2)
+        view.bringSubviewToFront(controllerView)
+        #else
         view.bringSubview(toFront: controllerView)
+        #endif
+
         NSLayoutConstraint.activate([
             backgroundOverlay.widthAnchor.constraint(equalTo: view.widthAnchor),
             backgroundOverlay.bottomAnchor.constraint(equalTo: view.bottomAnchor),
@@ -96,7 +112,7 @@ class NewController: UIViewController,UIGestureRecognizerDelegate {
         self.view.isUserInteractionEnabled = true
         self.view.addGestureRecognizer(gesture)
     }
-    override func viewDidAppear(_ animated: Bool) {
+    override open func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         view.addSubview(topButton)
         topButton.anchorTo(top: view.topAnchor, leading: nil, bottom: nil, trailing: nil, padding: .init(top: 5, left: 0, bottom: 0, right: 0), size: .init(width: 50, height: 13), centerX: view.centerXAnchor, centerY: nil)
@@ -208,46 +224,4 @@ protocol ChildDelegate {
     func didBeginMovemnet()
     func fullPresentController()
     func dismissController()
-}
-
-extension UIView{
-    func fillSuperView(){
-        anchorTo(top: superview?.topAnchor, leading: superview?.leadingAnchor, bottom: superview?.bottomAnchor, trailing: superview?.trailingAnchor)
-    }
-    func centerInView(size: CGSize){
-        anchorTo(top: nil, leading: nil, bottom: nil, trailing: nil, size: size, centerX: superview?.centerXAnchor, centerY: superview?.centerYAnchor)
-    }
-    
-    func anchorSize(to view: UIView) {
-        widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
-        heightAnchor.constraint(equalTo: view.heightAnchor).isActive = true
-    }
-    func anchorTo(top: NSLayoutYAxisAnchor?, leading: NSLayoutXAxisAnchor?, bottom: NSLayoutYAxisAnchor?, trailing: NSLayoutXAxisAnchor?, padding: UIEdgeInsets = .zero, size: CGSize = .zero, centerX:NSLayoutXAxisAnchor? = nil, centerY:NSLayoutYAxisAnchor? = nil) {
-        translatesAutoresizingMaskIntoConstraints = false
-        
-        if let top = top {
-            topAnchor.constraint(equalTo: top, constant: padding.top).isActive = true
-        }
-        if let centerX = centerX{
-            centerXAnchor.constraint(equalTo: centerX).isActive = true
-        }
-        if let centerY = centerY{
-            centerYAnchor.constraint(equalTo: centerY).isActive = true
-        }
-        if let leading = leading {
-            leadingAnchor.constraint(equalTo: leading, constant: padding.left).isActive = true
-        }
-        if let bottom = bottom {
-            bottomAnchor.constraint(equalTo: bottom, constant: -padding.bottom).isActive = true
-        }
-        if let trailing = trailing {
-            trailingAnchor.constraint(equalTo: trailing, constant: -padding.right).isActive = true
-        }
-        if size.width != 0 {
-            widthAnchor.constraint(equalToConstant: size.width).isActive = true
-        }
-        if size.height != 0 {
-            heightAnchor.constraint(equalToConstant: size.height).isActive = true
-        }
-    }
 }
