@@ -5,6 +5,8 @@
 [![License](https://img.shields.io/cocoapods/l/BottomDrawer.svg?style=flat)](https://cocoapods.org/pods/BottomDrawer)
 [![Platform](https://img.shields.io/cocoapods/p/BottomDrawer.svg?style=flat)](https://cocoapods.org/pods/BottomDrawer)
 
+![](screenshot.gif)
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
