@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
   s.description      = 'BottomDrawer is an iOS component which presents a dismissible view from the bottom of the screen. BottomDrawer can be a useful replacement for popups and menus but can hold any viewcontroller so the use cases are endless. This repository includes the BottomDrawer component itself but also includes an extension for autolayout (NSLayoutConstraint)'
 
   s.homepage         = 'https://github.com/sagaya/BottomDrawer'
-   s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
+   s.screenshots     = 'https://github.com/sagaya/BottomDrawer/raw/master/screenshot.gif'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'sagaya' => 'shaggy.hafeez@gmail.com' }
   s.source           = { :git => 'https://github.com/sagaya/BottomDrawer.git', :tag => s.version.to_s }
