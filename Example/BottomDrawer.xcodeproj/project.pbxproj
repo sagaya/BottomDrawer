@@ -30,7 +30,7 @@
 /* Begin PBXFileReference section */
 		12CC7AF46DFAB629EDE49561 /* Pods-BottomDrawer_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BottomDrawer_Example.debug.xcconfig"; path = "Target Support Files/Pods-BottomDrawer_Example/Pods-BottomDrawer_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		1C53972EC223CAEBBF82FA68 /* Pods-BottomDrawer_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BottomDrawer_Tests.debug.xcconfig"; path = "Target Support Files/Pods-BottomDrawer_Tests/Pods-BottomDrawer_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		22F372004A78CB72BA0A4F8E /* BottomDrawer.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = BottomDrawer.podspec; path = ../BottomDrawer.podspec; sourceTree = "<group>"; };
+		22F372004A78CB72BA0A4F8E /* BottomDrawer.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = BottomDrawer.podspec; path = ../BottomDrawer.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		37CCAA968532CD9CB4836F00 /* Pods-BottomDrawer_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BottomDrawer_Example.release.xcconfig"; path = "Target Support Files/Pods-BottomDrawer_Example/Pods-BottomDrawer_Example.release.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* BottomDrawer_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BottomDrawer_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -44,9 +44,9 @@
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		6432711D55EF746A1C3863C5 /* Pods_BottomDrawer_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BottomDrawer_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		77351DE58AD145F8B76713AB /* Pods_BottomDrawer_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BottomDrawer_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A31B30F45F8C27AFD56C140B /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		A31B30F45F8C27AFD56C140B /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		C206BB7443EE504D0D6D2821 /* Pods-BottomDrawer_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BottomDrawer_Tests.release.xcconfig"; path = "Target Support Files/Pods-BottomDrawer_Tests/Pods-BottomDrawer_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		EBD536AC6ED1A94B9701920B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		EBD536AC6ED1A94B9701920B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,7 +147,6 @@
 				1C53972EC223CAEBBF82FA68 /* Pods-BottomDrawer_Tests.debug.xcconfig */,
 				C206BB7443EE504D0D6D2821 /* Pods-BottomDrawer_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -213,10 +212,12 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = R9HNZAYA8U;
 						LastSwiftMigration = 0900;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = R9HNZAYA8U;
 						LastSwiftMigration = 0900;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
@@ -482,6 +483,7 @@
 			baseConfigurationReference = 12CC7AF46DFAB629EDE49561 /* Pods-BottomDrawer_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = R9HNZAYA8U;
 				INFOPLIST_FILE = BottomDrawer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -497,6 +499,7 @@
 			baseConfigurationReference = 37CCAA968532CD9CB4836F00 /* Pods-BottomDrawer_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = R9HNZAYA8U;
 				INFOPLIST_FILE = BottomDrawer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -511,6 +514,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1C53972EC223CAEBBF82FA68 /* Pods-BottomDrawer_Tests.debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = R9HNZAYA8U;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -533,6 +537,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C206BB7443EE504D0D6D2821 /* Pods-BottomDrawer_Tests.release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = R9HNZAYA8U;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
