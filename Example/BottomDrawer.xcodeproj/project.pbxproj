@@ -13,6 +13,7 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		9F12ABB821CA83D3001010A0 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F12ABB721CA83D3001010A0 /* TestViewController.swift */; };
 		A63EE81F751A6818A17AB2C8 /* Pods_BottomDrawer_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77351DE58AD145F8B76713AB /* Pods_BottomDrawer_Tests.framework */; };
 		CD107C2E6924F7FA2198A864 /* Pods_BottomDrawer_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6432711D55EF746A1C3863C5 /* Pods_BottomDrawer_Example.framework */; };
 /* End PBXBuildFile section */
@@ -44,6 +45,7 @@
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		6432711D55EF746A1C3863C5 /* Pods_BottomDrawer_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BottomDrawer_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		77351DE58AD145F8B76713AB /* Pods_BottomDrawer_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BottomDrawer_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F12ABB721CA83D3001010A0 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		A31B30F45F8C27AFD56C140B /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		C206BB7443EE504D0D6D2821 /* Pods-BottomDrawer_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BottomDrawer_Tests.release.xcconfig"; path = "Target Support Files/Pods-BottomDrawer_Tests/Pods-BottomDrawer_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		EBD536AC6ED1A94B9701920B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
+				9F12ABB721CA83D3001010A0 /* TestViewController.swift */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
@@ -337,6 +340,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				9F12ABB821CA83D3001010A0 /* TestViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

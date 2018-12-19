@@ -17,6 +17,8 @@ open class BottomController: UIViewController,UIGestureRecognizerDelegate {
     var storedcontrollerView:UIView?
     public static var shared = BottomController()
     public var movable = true
+    public var roundedCorner = true
+    public var cornerRadius:CGFloat = 10
     var vu: UIView?
     @objc func openr(){
         guard  let controllerView = vu else {return}
@@ -45,49 +47,7 @@ open class BottomController: UIViewController,UIGestureRecognizerDelegate {
     override open func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.clear
-        view.addSubview(backgroundOverlay)
-        self.modalPresentationStyle = .overCurrentContext
-        self.hidesBottomBarWhenPushed = true
-        guard let controller = self.destinationController, let controllerView = controller.view else {return}
-        #if swift(>=4.2)
-        addChild(controller)
-        #else
-        addChildViewController(controller)
-        #endif
-        
-        addGestureToView()
-        self.view.addSubview(controllerView)
-        controllerView.translatesAutoresizingMaskIntoConstraints = false
-        controllerView.layer.cornerRadius = 10.0
-        controllerView.layer.masksToBounds = true
-        controllerView.layer.isOpaque = false
-        controllerView.tag = 64820
-        let currentConstant = startingHeight ?? 120
-        containerViewTopConstraint = controllerView.topAnchor.constraint(equalTo: view.topAnchor, constant: view.frame.height - currentConstant)
-        containerViewTopConstraint?.isActive = true
-        #if swift(>=4.2)
-        view.bringSubviewToFront(controllerView)
-        #else
-        view.bringSubview(toFront: controllerView)
-        #endif
-
-        NSLayoutConstraint.activate([
-            backgroundOverlay.widthAnchor.constraint(equalTo: view.widthAnchor),
-            backgroundOverlay.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            backgroundOverlay.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            backgroundOverlay.heightAnchor.constraint(equalTo: view.heightAnchor),
-            
-            controllerView.widthAnchor.constraint(equalTo: view.widthAnchor),
-            controllerView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            controllerView.centerXAnchor.constraint(equalTo: view.centerXAnchor)
-            ])
-        //Animate background color change
-        setupGestureRecognizers()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-            UIView.animate(withDuration: 0.5) {
-                self.backgroundOverlay.alpha = 1
-            }
-        }
+        configure()
     }
     
     private func setupGestureRecognizers() {
@@ -166,11 +126,60 @@ open class BottomController: UIViewController,UIGestureRecognizerDelegate {
             self.dismiss(animated: true, completion: nil)
         }
     }
-    
+    private func configure(){
+        view.addSubview(backgroundOverlay)
+        self.modalPresentationStyle = .overCurrentContext
+        self.hidesBottomBarWhenPushed = true
+        guard let controller = self.destinationController, let controllerView = controller.view else {return}
+        #if swift(>=4.2)
+        addChild(controller)
+        #else
+        addChildViewController(controller)
+        #endif
+        
+        addGestureToView()
+        self.view.addSubview(controllerView)
+        controllerView.translatesAutoresizingMaskIntoConstraints = false
+        if roundedCorner{
+            controllerView.layer.cornerRadius = cornerRadius
+            controllerView.layer.masksToBounds = true
+            if #available(iOS 11.0, *) {
+                controllerView.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
+            }
+        }
+        controllerView.layer.isOpaque = false
+        controllerView.tag = 64820
+        let currentConstant = startingHeight ?? 120
+        containerViewTopConstraint = controllerView.topAnchor.constraint(equalTo: view.topAnchor, constant: view.frame.height - currentConstant)
+        containerViewTopConstraint?.isActive = true
+        #if swift(>=4.2)
+        view.bringSubviewToFront(controllerView)
+        #else
+        view.bringSubview(toFront: controllerView)
+        #endif
+        
+        NSLayoutConstraint.activate([
+            backgroundOverlay.widthAnchor.constraint(equalTo: view.widthAnchor),
+            backgroundOverlay.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            backgroundOverlay.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            backgroundOverlay.heightAnchor.constraint(equalTo: view.heightAnchor),
+            
+            controllerView.widthAnchor.constraint(equalTo: view.widthAnchor),
+            controllerView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            controllerView.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+            ])
+        //Animate background color change
+        setupGestureRecognizers()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            UIView.animate(withDuration: 0.5) {
+                self.backgroundOverlay.alpha = 1
+            }
+        }
+    }
     func didEndMovemnt(value: CGFloat, velocity: CGPoint) {
         let newConstant = self.previousContainerViewTopConstraint + value
         if(newConstant > 30){
-            let currentConstant = startingHeight ?? 120
+            let currentConstant:CGFloat =  120
             if newConstant >= self.view.bounds.height - currentConstant{
                 self.dismissController()
             }
@@ -191,7 +200,7 @@ open class BottomController: UIViewController,UIGestureRecognizerDelegate {
             print("This is nil")
         }
         
-        let newConstant = self.previousContainerViewTopConstraint + value - 80
+        let newConstant = self.previousContainerViewTopConstraint + value - 180
         UIView.animate(withDuration: 0.5) {
             self.containerViewTopConstraint?.constant = newConstant
             self.view.layoutIfNeeded()

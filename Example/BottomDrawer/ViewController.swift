@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import BottomDrawer
 
 class ViewController: UIViewController {
 
@@ -19,6 +20,17 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    @IBAction func showBottom(_ sender: Any) {
+        let request = self.storyboard?.instantiateViewController(withIdentifier: "test") as? TestViewController
+        let v = BottomController()
+        request?.view.backgroundColor = .red
+        v.destinationController = request
+        v.sourceController = self
+        v.startingHeight = 200
+        v.cornerRadius = 10
+        v.modalPresentationStyle = .overCurrentContext
+        self.present(v, animated: true, completion: nil)
+    }
+    
 }
 
