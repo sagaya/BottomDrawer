@@ -206,7 +206,6 @@ open class BottomController: UIViewController,UIGestureRecognizerDelegate {
             self.view.layoutIfNeeded()
         }
     }
-    
     func didBeginMovemnet(){
         self.previousContainerViewTopConstraint = containerViewTopConstraint?.constant ?? 0
     }
