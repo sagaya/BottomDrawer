@@ -1,5 +1,5 @@
 PODS:
-  - BottomDrawer (0.1.0)
+  - BottomDrawer (0.1.1)
 
 DEPENDENCIES:
   - BottomDrawer (from `../`)
@@ -9,8 +9,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  BottomDrawer: 747e2db073a6337ce01c63c8aca5bdc3bdb89329
+  BottomDrawer: 5993cb55da08ccd92b6674d8b925410cb765f34f
 
-PODFILE CHECKSUM: 9f071cecc2249322f9d79d4272f56f7c7b1b162b
+PODFILE CHECKSUM: 402a579bba9535623e1f60ff998040bd5dfc7ef2
 
 COCOAPODS: 1.6.0.beta.2

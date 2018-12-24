@@ -3,9 +3,4 @@ use_frameworks!
 target 'BottomDrawer_Example' do
   pod 'BottomDrawer', :path => '../'
 
-  target 'BottomDrawer_Tests' do
-    inherit! :search_paths
-
-    
-  end
 end

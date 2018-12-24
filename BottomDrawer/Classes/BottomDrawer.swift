@@ -40,7 +40,7 @@ open class BottomController: UIViewController,UIGestureRecognizerDelegate {
     internal var panGestureRecognizer: UIPanGestureRecognizer?
     lazy var topButton: UIImageView = {
         let image = UIImageView()
-        image.image = UIImage(named: "Rectangle")
+//        image.image = UIImage(named: "Rectangle")
         image.contentMode = .scaleAspectFit
         return image
     }()
@@ -48,6 +48,7 @@ open class BottomController: UIViewController,UIGestureRecognizerDelegate {
         super.viewDidLoad()
         view.backgroundColor = UIColor.clear
         configure()
+        topButton.image = BottomController.bundledImage(named: "Rectangle")
     }
     
     private func setupGestureRecognizers() {
@@ -100,10 +101,10 @@ open class BottomController: UIViewController,UIGestureRecognizerDelegate {
                 self.dismissController()
                 break;
             }
-            topButton.image = UIImage(named: "down_arrow")
+//            topButton.image = UIImage(named: "down_arrow")
             self.didMoveController(value: absValue, velocity: velocity)
         case .ended:
-            topButton.image = UIImage(named: "Rectangle")
+//            topButton.image = UIImage(named: "Rectangle")
             self.didEndMovemnt(value: absValue, velocity: velocity)
         default:
             return
@@ -224,6 +225,13 @@ open class BottomController: UIViewController,UIGestureRecognizerDelegate {
                         self.view.layoutIfNeeded()
         },
                        completion: nil)
+    }
+    class func bundledImage(named: String) -> UIImage? {
+        let image = UIImage(named: named)
+        if image == nil {
+            return UIImage(named: named, in: Bundle(for: BottomController.classForCoder()), compatibleWith: nil)
+        }
+        return image
     }
 }
 protocol ChildDelegate {
