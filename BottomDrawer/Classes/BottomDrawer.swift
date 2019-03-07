@@ -46,9 +46,11 @@ open class BottomController: UIViewController,UIGestureRecognizerDelegate {
     }()
     override open func viewDidLoad() {
         super.viewDidLoad()
+//        topButton.image = BottomController.bundledImage(named: "Rectangle")
+        let image = UIImage.fromPodBundle("Rectangle")
+        topButton.image = image
         view.backgroundColor = UIColor.clear
         configure()
-        topButton.image = BottomController.bundledImage(named: "Rectangle")
     }
     
     private func setupGestureRecognizers() {
@@ -62,8 +64,6 @@ open class BottomController: UIViewController,UIGestureRecognizerDelegate {
         case true:
             controllerView?.addGestureRecognizer(panGestureRecognizer)
         case false:
-            break;
-        default:
             break;
         }
         self.panGestureRecognizer = panGestureRecognizer
@@ -233,6 +233,7 @@ open class BottomController: UIViewController,UIGestureRecognizerDelegate {
         }
         return image
     }
+    
 }
 protocol ChildDelegate {
     func didMoveController(value:CGFloat, velocity:CGPoint)
@@ -240,4 +241,16 @@ protocol ChildDelegate {
     func didBeginMovemnet()
     func fullPresentController()
     func dismissController()
+}
+final class Project: NSObject {
+    private static let frameworkBundle = Bundle(for: Project.self)
+    static let path = frameworkBundle.path(forResource: "Project", ofType: "bundle")!
+    static let bundle = Bundle(path: path)!
+}
+
+extension UIImage {
+    /// get an image from the project bundle
+    static func fromPodBundle(_ name: String) -> UIImage? {
+        return UIImage(named: name, in: Project.bundle, compatibleWith: nil)
+    }
 }

@@ -12,10 +12,10 @@
 		1FCC17F9D1F4715E8E2283BD0D2C2531 /* BottomDrawer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AA93A47F52A1668CA9F8EE3BD67A99EB /* BottomDrawer-dummy.m */; };
 		24555DC5B6AB4F2FC7799B2279E8BBDA /* Pods-BottomDrawer_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 558A188547445EA79CD9E8B672E7C6C5 /* Pods-BottomDrawer_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		29A1722EAE50CFAF5C652311BF0E8A98 /* AutoLayout+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D5FC88F4E03B5C39C8FF8A7843D41D /* AutoLayout+Extension.swift */; };
+		53691E9791698A24DC054116195A9732 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 896897EA1FE4E331074CD68C43AF5E23 /* Media.xcassets */; };
 		5DFCB108A00890F8E47CF366CBAEB750 /* Pods-BottomDrawer_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 70DD6FC502131E1C039526413861DCED /* Pods-BottomDrawer_Example-dummy.m */; };
 		82AC9A55739932E1D9285CED850FE9AC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56F2ED3CDAE5D2928456AF5EDDDE4257 /* Foundation.framework */; };
 		82E1046A35C2199100BABF56D8EF3538 /* BottomDrawer.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 21EEB8B1665DCC38A26FFD85DB6F4104 /* BottomDrawer.bundle */; };
-		9F7E1E3E21D0F14600DBCDB1 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 896897EA1FE4E331074CD68C43AF5E23 /* Media.xcassets */; };
 		BC90DA22F8BAF4C4AEDF0AC19E09E126 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1899DF19920E20BF9EE667803725971 /* UIKit.framework */; };
 		BE906E006C2B4A874460C5B0F51FA0E1 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17E061A876F428A8E8C9F0CD173365A7 /* MapKit.framework */; };
 		C2BB0D6F519B4083D4FDF9F31E3FF9AA /* BottomDrawer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EDF0241B0657081B107FFD82DAC29F /* BottomDrawer.swift */; };
@@ -39,10 +39,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		02993156C61DBE979DF51A793A0E85EA /* BottomDrawer.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = BottomDrawer.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		02993156C61DBE979DF51A793A0E85EA /* BottomDrawer.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = BottomDrawer.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		17E061A876F428A8E8C9F0CD173365A7 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/MapKit.framework; sourceTree = DEVELOPER_DIR; };
-		21EEB8B1665DCC38A26FFD85DB6F4104 /* BottomDrawer.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BottomDrawer.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
-		34B62AD5E326E642B70479219A6722B2 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		21EEB8B1665DCC38A26FFD85DB6F4104 /* BottomDrawer.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = BottomDrawer.bundle; path = "BottomDrawer-BottomDrawer.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		34B62AD5E326E642B70479219A6722B2 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		37F130F415551FC97F249F3AA5CC207F /* BottomDrawer-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "BottomDrawer-Info.plist"; sourceTree = "<group>"; };
 		4726B0020BB6E1607BA827F0A8C83788 /* Pods-BottomDrawer_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BottomDrawer_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		4CC8B6C208A42C367F2B681E03A6F50C /* Pods-BottomDrawer_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BottomDrawer_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -59,14 +59,14 @@
 		91F381B4407715A3E4E5B2C1BF9FD443 /* Pods-BottomDrawer_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BottomDrawer_Example.release.xcconfig"; sourceTree = "<group>"; };
 		926A8DC772D7D571A583F5E7C74E2A30 /* BottomDrawer-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BottomDrawer-umbrella.h"; sourceTree = "<group>"; };
 		95769EB563C71A88942A0E831CE7513D /* Pods-BottomDrawer_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-BottomDrawer_Example.modulemap"; sourceTree = "<group>"; };
-		A9EAF009467A4E574DBE5CDA878E2391 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		A9EAF009467A4E574DBE5CDA878E2391 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		AA11B2316AB35DF4605297D465D4518E /* BottomDrawer.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = BottomDrawer.modulemap; sourceTree = "<group>"; };
 		AA93A47F52A1668CA9F8EE3BD67A99EB /* BottomDrawer-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BottomDrawer-dummy.m"; sourceTree = "<group>"; };
-		B36AB396275697EEE1A5B13BA8A38FE3 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		C07544452785C1B351C9A154C2BA70E0 /* Pods_BottomDrawer_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BottomDrawer_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B36AB396275697EEE1A5B13BA8A38FE3 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		C07544452785C1B351C9A154C2BA70E0 /* Pods_BottomDrawer_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_BottomDrawer_Example.framework; path = "Pods-BottomDrawer_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1899DF19920E20BF9EE667803725971 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		D8D5FC88F4E03B5C39C8FF8A7843D41D /* AutoLayout+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "AutoLayout+Extension.swift"; path = "BottomDrawer/Classes/AutoLayout+Extension.swift"; sourceTree = "<group>"; };
-		D9EEB361E61445F7E950198E5B18BF07 /* BottomDrawer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BottomDrawer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9EEB361E61445F7E950198E5B18BF07 /* BottomDrawer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = BottomDrawer.framework; path = BottomDrawer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3B2BBE0621F2AB98140E4DDE0CC33F9 /* ResourceBundle-BottomDrawer-BottomDrawer-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-BottomDrawer-BottomDrawer-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -334,7 +334,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F7E1E3E21D0F14600DBCDB1 /* Media.xcassets in Resources */,
 				82E1046A35C2199100BABF56D8EF3538 /* BottomDrawer.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -343,6 +342,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53691E9791698A24DC054116195A9732 /* Media.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -541,7 +541,8 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 4.2;
 				SYMROOT = "${SRCROOT}/../build";
 			};
