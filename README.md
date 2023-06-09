@@ -41,7 +41,7 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Author
 
-sagaya, shaggy.hafeez@gmail.com
+
 
 ## License
 
